@@ -54,6 +54,7 @@ public class Player : MonoBehaviour
     {
         if(collision.tag == "Enemy")
         {
+            // make the particles go pewewewewewew kabooom kapow kaplowieeeee
             Instantiate(fx, transform.position, Quaternion.identity);
 
             Destroy(gameObject);
@@ -63,6 +64,7 @@ public class Player : MonoBehaviour
 
         if(collision.tag == "Wall")
         {
+            // sane thingsd
             Instantiate(fx, transform.position, Quaternion.identity);
 
             Destroy(gameObject);
@@ -73,6 +75,9 @@ public class Player : MonoBehaviour
 
     void Move()
     {
+
+        // what does all these even mean i mean i get it but no i dont also huh why is it mathf.rad2deg -90f??? is that an issue with its direction in the scene??? WHY WOULD IT BE -90f!?!??!?!?
+        
         rb.velocity = new Vector2(moveDirection.x * speed, moveDirection.y * speed);
 
         Vector2 aimDirection = mousePosition - rb.position;
