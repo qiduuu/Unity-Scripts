@@ -15,6 +15,7 @@ public class Weapon : MonoBehaviour
     {
         GameObject projectile = Instantiate(bullet, firePoint.position, firePoint.rotation);
 
+        // i think the firepoint.up here actually depends on the project so if it doesnt work just change the direction dw its good
         projectile.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
     }
 }
