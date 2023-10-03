@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerMovementArrowKeys : MonoBehaviour
 {
+
+    // the comments are actually pretty good i am nailing this
+    
     Rigidbody2D body;
 
     float horizontal;
@@ -19,16 +22,16 @@ public class PlayerMovementArrowKeys : MonoBehaviour
 
     void Update()
     {
-        // Gives a value between -1 and 1
+        // give value between -1 and 1
         horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
         vertical = Input.GetAxisRaw("Vertical"); // -1 is down
     }
 
     void FixedUpdate()
     {
-        if (horizontal != 0 && vertical != 0) // Check for diagonal movement
+        if (horizontal != 0 && vertical != 0) // check the diagonals frfr
         {
-            // limit movement speed diagonally, so you move at 70% speed
+            // limit speed diagonally, so you move at 70% speed
             horizontal *= moveLimiter;
             vertical *= moveLimiter;
         }
