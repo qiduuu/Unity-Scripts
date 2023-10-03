@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+
+    // everything here is pretty much self explanatory if you can read english
+    
     public Rigidbody2D rb;
 
     public GameObject fx;
