@@ -25,6 +25,9 @@ public class Enemy : MonoBehaviour
     {
         playerPos = target.transform.position;
 
+        
+        // actually the worst way to do this. Never do this unless you have a blank scene
+        // alternative option: "A* Pathfinding" its free on unity store
         transform.position = Vector2.MoveTowards(transform.position, playerPos, speed * Time.deltaTime);
     }
 
